@@ -109,7 +109,7 @@ export const MyComposition: React.FC = () => {
           >
             <Img
               src={staticFile("logo.png")}
-              style={{ width: 120, height: "auto" }}
+              style={{ width: 128, height: "auto" }}
               alt="Outro Logo"
             />
             <div
@@ -117,7 +117,7 @@ export const MyComposition: React.FC = () => {
                 marginTop: 40,
                 color: "#f1f1f1",
               }}
-              className="english-font text-4xl font-bold"
+              className="english-font text-5xl font-bold"
             >
               Hackers and Painters
             </div>
@@ -126,7 +126,7 @@ export const MyComposition: React.FC = () => {
                 marginTop: 30,
                 color: "#f1f1f1",
               }}
-              className="persian-font text-4xl font-bold"
+              className="persian-font text-5xl font-bold"
             >
               هکرها و نقاش‌ها
             </div>
