@@ -1,0 +1,12 @@
+{
+  "fps": 24,
+  "mainVideo": "K3.mp4",
+  "srtFile": "K3.srt",
+  "srtJson": "subtitles.json",
+  "introUsed": false,
+  "outroUsed": true,
+  "introFrames": 0,
+  "mainFrames": 2643,
+  "outroFrames": 72,
+  "totalFrames": 2715
+}
