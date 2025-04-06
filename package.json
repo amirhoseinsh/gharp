@@ -10,6 +10,7 @@
     "@remotion/google-fonts": "4.0.286",
     "@remotion/media-utils": "^4.0.286",
     "@remotion/tailwind-v4": "4.0.286",
+    "framer-motion": "^12.6.3",
     "inquirer": "^12.5.2",
     "install": "^0.13.0",
     "npm": "^11.2.0",

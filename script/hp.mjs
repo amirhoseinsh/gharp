@@ -110,11 +110,39 @@ async function main() {
       },
     ]);
 
-    // 4) Get main video duration
+    // === 4) Prompt if there's a narrator and get name(s)
+    const { hasNarrator } = await inquirer.prompt([
+      {
+        type: "confirm",
+        name: "hasNarrator",
+        message: "Does the video have a narrator (or multiple narrators)?",
+        default: false,
+      },
+    ]);
+
+    let narratorNames = [];
+    if (hasNarrator) {
+      const { narratorsInput } = await inquirer.prompt([
+        {
+          type: "input",
+          name: "narratorsInput",
+          message: "Enter the narrator's name(s), comma-separated if multiple:",
+          default: "John Doe",
+        },
+      ]);
+
+      // Convert comma-separated names to array, trimming extra spaces
+      narratorNames = narratorsInput
+        .split(",")
+        .map((name) => name.trim())
+        .filter((n) => n.length > 0);
+    }
+
+    // 5) Get main video duration
     const mainDurationSecs = getVideoDurationInSeconds(mainPath);
     const mainFrames = Math.floor(mainDurationSecs * fps);
 
-    // By default, 0 for both
+    // By default, 0 for both intro/outro
     let introUsed = false;
     let outroUsed = false;
     let introFrames = 0;
@@ -131,10 +159,11 @@ async function main() {
 
     const totalFrames = introFrames + mainFrames + outroFrames;
 
+    // Collect everything into a config object
     const config = {
       fps,
-      mainVideo, // The name of the main video
-      srtFile, // The original SRT filename
+      mainVideo,
+      srtFile,
       srtJson: "subtitles.json",
       introUsed,
       outroUsed,
@@ -142,6 +171,8 @@ async function main() {
       mainFrames,
       outroFrames,
       totalFrames,
+      hasNarrator,
+      narratorNames, // array of string(s)
     };
 
     // Write videoConfig.json
