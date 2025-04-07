@@ -1,7 +1,7 @@
 {
-  "name": "hp-video",
+  "name": "gharp",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "Gharp - Easy video production tool for HackersAndPainters content",
   "repository": {},
   "license": "MIT",
   "private": false,

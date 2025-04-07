@@ -1,8 +1,8 @@
-# Hackers and Painters Video Generator
+# Gharp (قارپ)
 
 [English](README.md) | [فارسی](README-fa.md)
 
-A specialized video composition tool built for HackersAndPainters Instagram reels, powered by Remotion framework. This tool automates the creation of educational tech content with professional overlays, subtitles, and branding.
+A specialized video editing automation tool built for HackersAndPainters Instagram reels, powered by Remotion framework. The name "Gharp" (قارپ) reflects its purpose: making production editing as easy as grabbing something.
 
 🌐 Website: [hackersandpainters.xyz](https://hackersandpainters.xyz)
 📸 Instagram: [@hackersandpainters](https://instagram.com/hackersandpainters)
