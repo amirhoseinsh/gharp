@@ -86,7 +86,7 @@ export const MyComposition: React.FC = () => {
       )}
 
       {/* MAIN VIDEO */}
-      <Sequence from={introFrames} durationInFrames={mainFrames}>
+      <Sequence from={introFrames - 1} durationInFrames={mainFrames}>
         <Video src={staticFile(mainVideo)} />
       </Sequence>
 

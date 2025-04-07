@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "My Remotion video",
   "repository": {},
-  "license": "UNLICENSED",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "@remotion/cli": "4.0.286",
     "@remotion/google-fonts": "4.0.286",

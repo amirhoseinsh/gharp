@@ -1,54 +1,90 @@
-# Remotion video
+# Hackers and Painters Video Generator
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.gif">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+[English](README.md) | [فارسی](README-fa.md)
 
-Welcome to your Remotion project!
+A specialized video composition tool built for HackersAndPainters Instagram reels, powered by Remotion framework. This tool automates the creation of educational tech content with professional overlays, subtitles, and branding.
 
-## Commands
+🌐 Website: [hackersandpainters.xyz](https://hackersandpainters.xyz)
+📸 Instagram: [@hackersandpainters](https://instagram.com/hackersandpainters)
 
-**Install Dependencies**
+## Prerequisites
 
-```console
-npm i
+- Node.js (latest LTS version)
+- ffmpeg installed and available in your system PATH
+- npm or yarn
+
+## Technologies
+
+- 🎬 Built with [Remotion](https://www.remotion.dev/) - React framework for video generation
+- ⚛️ React and TypeScript for component-based video composition
+- 🎨 Tailwind CSS for styling
+- 🎭 Framer Motion for smooth animations
+
+## Quick Start
+
+1. Install dependencies:
+```bash
+npm install
 ```
 
-**Start Preview**
+2. Configure your video (this will create videoConfig.json):
+```bash
+npm run hp
+```
 
-```console
+You'll be prompted for:
+- SRT subtitle file name (place in public/ folder)
+- Main video file name (place in public/ folder)
+- Intro/Outro preferences (none, intro only, outro only, or both)
+- Narrator information (optional)
+
+3. Start the Remotion preview:
+```bash
 npm run dev
 ```
 
-**Render video**
+## Project Structure
 
-```console
-npx remotion render
+- `public/` - Place your assets here:
+  - Main video file (e.g., K2.mp4)
+  - Subtitle file (e.g., K2.srt)
+  - logo.png (for intro/outro)
+  - overlays.json (for custom overlay definitions)
+
+## Features
+
+- ⚡ Optimized for Instagram Reels format
+- 🎭 Smooth narrator animation with branded colors
+- 📝 Bilingual subtitle support (Persian/English)
+- 🎨 Custom educational overlays
+- 🎬 Optional branded intro/outro sequences
+- 🔄 HackersAndPainters watermark and branding
+
+## Configuration
+
+The `npm run hp` script will generate a `videoConfig.json` file with your preferences. This includes:
+- Video FPS settings
+- Intro/Outro durations
+- Main video path
+- Subtitle configuration
+- Narrator settings
+
+## Building
+
+To render the final video:
+
+```bash
+npm run build
 ```
 
-**Upgrade Remotion**
+## Customization
 
-```console
-npx remotion upgrade
-```
-
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
+- Modify `src/Overlay.tsx` for visual changes
+- Update `public/overlays.json` for custom overlay content
+- Adjust styles in the stylesheet section of Overlay.tsx
 
 ## License
 
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+This project is open source and available under the MIT License.
